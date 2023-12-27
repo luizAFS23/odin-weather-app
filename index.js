@@ -5,8 +5,10 @@ button.addEventListener('click', (e) => {
     const city_name = document.getElementById('city-name').value;
     var city = document.querySelector('.city');
     var state = document.querySelector('.state');
-    const country = document.querySelector('.country');
+    var country = document.querySelector('.country');
     const weather_info = document.querySelector('.weather-info');
+    const temp_c = document.querySelector('.temperature-c');
+    const temp_f = document.querySelector('.temperature-f');
 
     if(weather_info.style.display == 'none'){
         weather_info.style.display = '';
@@ -20,6 +22,8 @@ button.addEventListener('click', (e) => {
         city.innerHTML = weatherData.location.name;
         state.innerHTML = weatherData.location.region;
         country.innerHTML = weatherData.location.country;
+        temp_c.innerHTML = `${weatherData.current.temp_c}Cº`;
+        temp_f.innerHTML = `${weatherData.current.temp_f}Fº`;
     }
     getWeatherInfo();
 })
