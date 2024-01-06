@@ -2,18 +2,6 @@ class LinkedList{
     constructor(list){
         this.list = list;
     }
-
-    get list(){
-        return this.showList();
-    }
-
-    set list(value){
-        this.list.push(value);
-    }
-
-    showList(){
-        return this.list;
-    }
 }
 
 class Node{
@@ -26,11 +14,11 @@ class Node{
     }
 }
 
-let linkedlist = new LinkedList([1,2,3,4]);
+let linkedlist = new LinkedList([]);
 
 function appendValue(value){
     const node = new Node(value);
-    
+    linkedlist.list.push(node);
 }
 
 const head = (item) => {
@@ -38,4 +26,8 @@ const head = (item) => {
     return head;
 }
 
-console.log(linkedlist.showList());
+
+appendValue(1);
+appendValue(3);
+
+console.log(linkedlist);
