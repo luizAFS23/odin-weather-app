@@ -2,10 +2,7 @@ class LinkedList{
 
 }
 
-class Node{
-    constructor(value, nextNode){
-        this.value = value;
-        this.nextNode = this.nextNode;
-    }
-
+const Node = function(value, nextNode){
+    this.value = null;
+    this.nextNode = null;
 }
