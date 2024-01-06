@@ -1,6 +1,6 @@
 class LinkedList{
     constructor(list){
-        this.list = list;
+        this.list = [1,2,3,4];
     }
 
     get list(){
@@ -22,10 +22,16 @@ class Node{
     }
 }
 
+let linkedlist = new LinkedList();
+
 function appendValue(value){
     const node = new Node(value);
-
+    
 }
 
-let linkedlist = new LinkedList();
-console.log(node.next);
+const head = (item) => {
+    let head = new Node(item, head);
+    return head;
+}
+
+console.log(linkedlist.list());
