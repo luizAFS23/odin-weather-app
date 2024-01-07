@@ -1,33 +1,22 @@
 class LinkedList{
-    constructor(list){
-        this.list = list;
+    constructor(){
+        this.head = null;
+        this.size = 0;
     }
+
+    add(value){
+        
+    };
 }
 
 class Node{
-    next = null;
-    value = null;
-
-    constructor(element, next){
-        this.value = element;
-        this.next = next;
+    constructor(value){
+        this.value = value;
+        this.next = null;
     }
 }
 
-let linkedlist = new LinkedList([]);
+let linkedlist = new LinkedList();
 
-function appendValue(value){
-    const node = new Node(value);
-    linkedlist.list.push(node);
-}
-
-const head = (item) => {
-    let head = new Node(item, head);
-    return head;
-}
-
-
-appendValue(1);
-appendValue(3);
 
 console.log(linkedlist);
